@@ -1,0 +1,34 @@
+src/
+│
+├── components/
+│   ├── common/
+│   │   ├── Button.jsx
+│   │   ├── FloatingElement.jsx
+│   │   ├── LoadingScreen.jsx
+│   │   ├── Particle.jsx
+│   │   └── StatCard.jsx
+│   │
+│   ├── layout/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   └── CTASection.jsx
+│   │
+│   ├── sections/
+│   │   ├── HeroSection.jsx
+│   │   ├── AboutSection.jsx
+│   │   ├── ResultsSection.jsx
+│   │   ├── ProcessSection.jsx
+│   │   ├── FeaturesSection.jsx
+│   │   ├── ServicesSection.jsx
+│   │   └── PricingSection.jsx
+│
+├── hooks/
+│   ├── useCounter.js
+│   ├── useIntersectionObserver.js
+│   └── useScrollPosition.js
+│
+├── styles/
+│   └── animations.css
+│
+├── App.jsx  ← (optional if using routing)
+└── Apollo.jsx  ← (Main component that imports and assembles everything)
