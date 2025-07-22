@@ -3,7 +3,7 @@
 import React from "react";
 import Button from "../common/Button";
 
-const Header = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
+const Header = ({ isMobileMenuOpen, setIsMobileMenuOpen, onContactClick }) => {
   const navItems = ["Home", "About", "Portfolio", "Contact"];
 
   return (
@@ -32,9 +32,13 @@ const Header = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
           </ul>
 
           {/* CTA Button */}
-          <Button href="#contact" className="hidden md:block px-6 py-3">
+          <button
+            type="button"
+            className="hidden md:block px-6 py-3 inline-block rounded-full font-semibold transition-all duration-300 bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-400/30"
+            onClick={onContactClick}
+          >
             Get In Touch
-          </Button>
+          </button>
 
           {/* Mobile Menu Toggle */}
           <button

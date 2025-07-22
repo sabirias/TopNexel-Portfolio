@@ -4,7 +4,7 @@ import Badge from "../common/Badge";
 import GradientHeading from "../common/GradientHeading";
 import CTAButton from "../common/CTAButton";
 
-const HeroSection = () => {
+const HeroSection = ({ onContactClick }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const containerRef = useRef(null);
 
@@ -18,10 +18,6 @@ const HeroSection = () => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
-
-  const handleConnect = () => {
-    alert("Ready to connect! Add your contact form or redirect logic here.");
-  };
 
   return (
     <div
@@ -50,7 +46,7 @@ const HeroSection = () => {
           That empower businesses to grow, thrive, and stand out in the digital
           landscape with innovative design and powerful functionality.
         </p>
-        <CTAButton onClick={handleConnect} />
+        <CTAButton onClick={onContactClick} />
       </div>
     </div>
   );
