@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const GOOGLE_SHEETS_URL = 
-"https://script.google.com/macros/s/AKfycbybngvsKbGgxLLMEw0FQ07BbH89mVwtm7jEFjzbEsL_jLl27l0qcHT1w11lORbMN3WzgA/exec";
+const GOOGLE_SHEETS_URL =
+  "https://script.google.com/macros/s/AKfycbzv45zB-hsfH4gTVoYDBcp7K3Ldbw3YkXhFERDLD2OuJ1C8D0qbggpdUAG372wQkOCP7w/exec";
 
-  const ContactForm = ({ onClose }) => {
+const ContactForm = ({ onClose }) => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -39,19 +39,15 @@ const GOOGLE_SHEETS_URL =
     }
     setLoading(true);
     try {
-      const response = await fetch(GOOGLE_SHEETS_URL, {
+      const formData = new URLSearchParams(form).toString();
+      await fetch(GOOGLE_SHEETS_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify(form),
+        body: formData,
       });
-      const data = await response.json();
-      if (data.result === "success") {
-        setSubmitted(true);
-      } else {
-        setSubmitError("Failed to submit. Please try again later.");
-      }
+      setSubmitted(true);
     } catch (err) {
       setSubmitError(
         "Failed to submit. Please check your connection and try again."
