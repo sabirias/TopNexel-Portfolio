@@ -22,7 +22,7 @@ const Header = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
             {navItems.map((item) => (
               <li key={item}>
                 <a
-                  href={`#${item.toLowerCase()}`}
+                  href={`#${item === "Home" ? "hero" : item.toLowerCase()}`}
                   className="text-white hover:text-cyan-400 transition-colors"
                 >
                   {item}
@@ -52,7 +52,7 @@ const Header = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
               {navItems.map((item) => (
                 <li key={item}>
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${item === "Home" ? "hero" : item.toLowerCase()}`}
                     className="block py-2 text-white hover:text-cyan-400 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

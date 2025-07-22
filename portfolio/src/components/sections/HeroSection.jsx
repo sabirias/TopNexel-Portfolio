@@ -24,7 +24,10 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="min-h-0 sm:min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white overflow-hidden relative pt-24 sm:pt-32">
+    <div
+      id="hero"
+      className="bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white overflow-hidden relative py-20"
+    >
       {/* Fallback solid background */}
       <div className="absolute inset-0 bg-slate-900"></div>
       {/* Primary gradient overlay */}
@@ -34,7 +37,7 @@ const HeroSection = () => {
       {/* Main Content */}
       <div
         ref={containerRef}
-        className="relative z-10 flex flex-col justify-start items-center px-4 sm:px-8 text-center pt-4 pb-4"
+        className="container mx-auto max-w-[1200px] relative z-10 flex flex-col justify-start items-center px-4 sm:px-8 text-center pt-20 lg:pt-12"
       >
         <Badge />
         {/* Subtitle */}
