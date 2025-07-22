@@ -102,7 +102,7 @@ const HeroSection = () => {
       {/* Main Content */}
       <div
         ref={containerRef}
-        className="relative z-10 flex flex-col justify-start sm:justify-center items-center px-4 sm:px-8 text-center pb-8"
+        className="relative z-10 flex flex-col justify-start items-center px-4 sm:px-8 text-center pt-24 pb-4"
       >
         {/* Badge */}
         <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 rounded-full px-6 py-3 mb-6 sm:mb-12 backdrop-blur-lg shadow-lg shadow-cyan-500/25 animate-glow-pulse">
