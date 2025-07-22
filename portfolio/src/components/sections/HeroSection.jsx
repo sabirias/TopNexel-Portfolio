@@ -102,10 +102,10 @@ const HeroSection = () => {
       {/* Main Content */}
       <div
         ref={containerRef}
-        className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 text-center"
+        className="relative z-10 flex flex-col justify-start sm:justify-center items-center px-4 sm:px-8 text-center pb-8"
       >
         {/* Badge */}
-        <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 rounded-full px-6 py-3 mb-8 sm:mb-12 backdrop-blur-lg shadow-lg shadow-cyan-500/25 animate-glow-pulse">
+        <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 rounded-full px-6 py-3 mb-6 sm:mb-12 backdrop-blur-lg shadow-lg shadow-cyan-500/25 animate-glow-pulse">
           {/* Glowing Star Icon */}
           <div className="relative w-6 h-6 flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-pulse shadow-md shadow-yellow-400/50"></div>
@@ -124,12 +124,12 @@ const HeroSection = () => {
         </div>
 
         {/* Subtitle */}
-        <div className="text-cyan-400 text-lg sm:text-xl font-semibold mb-8 tracking-wide">
+        <div className="text-cyan-400 text-lg sm:text-xl font-semibold mb-6 sm:mb-8 tracking-wide">
           Modern Web Solutions for Visionary Brands
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight mb-8 bg-gradient-to-r from-white via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        <h1 className="text-3xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight mb-6 sm:mb-8 bg-gradient-to-r from-white via-cyan-400 to-blue-500 bg-clip-text text-transparent">
           We specialize in
           <br />
           building{" "}
@@ -146,7 +146,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Description */}
-        <p className="text-lg sm:text-xl text-white/80 max-w-2xl mb-12 leading-relaxed">
+        <p className="text-base sm:text-xl text-white/80 max-w-2xl mb-8 sm:mb-12 leading-relaxed">
           That empower businesses to grow, thrive, and stand out in the digital
           landscape with innovative design and powerful functionality.
         </p>
@@ -154,7 +154,7 @@ const HeroSection = () => {
         {/* CTA Button */}
         <button
           onClick={handleConnect}
-          className="relative bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full px-10 py-4 text-lg font-semibold text-white cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:-translate-y-1 overflow-hidden group"
+          className="relative bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:-translate-y-1 overflow-hidden group"
         >
           <span className="relative z-10">Connect With Us</span>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
