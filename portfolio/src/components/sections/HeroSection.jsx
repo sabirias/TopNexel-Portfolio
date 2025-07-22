@@ -21,7 +21,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white overflow-hidden relative pt-24 sm:pt-32">
+    <div className="min-h-0 sm:min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white overflow-hidden relative pt-24 sm:pt-32">
       {/* Fallback solid background */}
       <div className="absolute inset-0 bg-slate-900"></div>
 
