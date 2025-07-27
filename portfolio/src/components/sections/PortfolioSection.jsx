@@ -1,5 +1,11 @@
 import React from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import ecommerceImage from "../../assets/images/ecommerce.png";
+import portfolioImage from "../../assets/images/portfolio.png";
+import groceryImage from "../../assets/images/groceryStore.png";
+import groceryLandingPageImage from "../../assets/images/groceryLandingPage.png";
+import expenceTrackerImage from "../../assets/images/expenceTrack.png";
+import travelAgencyImage from "../../assets/images/hajj&umrahTravel.png";
 
 const PortfolioCard = ({
   image,
@@ -18,8 +24,8 @@ const PortfolioCard = ({
     {/* Project Image */}
     <div className="h-48 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-blue-500/10"></div>
-      <div className="relative z-10 text-cyan-400 text-4xl font-bold">
-        {image}
+      <div className="relative z-10 w-full h-full flex items-center justify-center">
+        <img src={image} alt={title} className="w-full h-full object-fit" />
       </div>
     </div>
 
@@ -54,7 +60,7 @@ const PortfolioCard = ({
             Live Demo
           </a>
         )}
-        {githubLink && (
+        {/* {githubLink && (
           <a
             href={githubLink}
             target="_blank"
@@ -63,7 +69,7 @@ const PortfolioCard = ({
           >
             GitHub
           </a>
-        )}
+        )} */}
       </div>
     </div>
   </div>
@@ -74,57 +80,77 @@ const PortfolioSection = () => {
 
   const portfolioProjects = [
     {
-      image: "🎨",
+      image: ecommerceImage,
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveLink: "https://ecommerce-demo.com",
+      technologies: ["Next.js", "React", "Node.js", "MongoDB", "Tailwind CSS"],
+      liveLink: "https://e-store-delta-six.vercel.app/",
       githubLink: "https://github.com/username/ecommerce-platform",
     },
     {
-      image: "📱",
-      title: "Task Management App",
+      image: groceryImage,
+      title: "Grocery Store App",
       description:
-        "A collaborative task management application with real-time updates and team collaboration features.",
-      technologies: ["React", "Firebase", "Tailwind CSS", "Redux"],
-      liveLink: "https://task-app-demo.com",
+        "A modern grocery website that lets users browse products, manage shopping carts, and collaborate with others for seamless group shopping.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "MongoDB",
+      ],
+      liveLink: "https://grocery-store-app-six.vercel.app/",
       githubLink: "https://github.com/username/task-management",
     },
     {
-      image: "🌐",
+      image: portfolioImage,
       title: "Portfolio Website",
       description:
         "A modern, responsive portfolio website showcasing creative work and professional experience.",
       technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-      liveLink: "https://portfolio-demo.com",
+      liveLink: "https://top-nexel-portfolio-icv3.vercel.app/",
       githubLink: "https://github.com/username/portfolio",
     },
     {
-      image: "🎮",
-      title: "Game Dashboard",
+      image: groceryLandingPageImage,
+      title: "Grocery Store Landing Page",
       description:
-        "An interactive gaming dashboard with statistics, leaderboards, and real-time data visualization.",
-      technologies: ["React", "D3.js", "Socket.io", "Express"],
-      liveLink: "https://game-dashboard-demo.com",
+        "A modern grocery website that lets users browse products, manage shopping carts, and collaborate with others for seamless group shopping.",
+      technologies: ["React", "Tailwind CSS", "Framer Motion", "Node.js"],
+      liveLink: "https://grocery-store-landing-page.vercel.app/",
       githubLink: "https://github.com/username/game-dashboard",
     },
     {
-      image: "📊",
-      title: "Analytics Dashboard",
+      image: expenceTrackerImage,
+      title: "Expence Tracker",
       description:
-        "A comprehensive analytics dashboard with charts, graphs, and data insights for business intelligence.",
-      technologies: ["React", "Chart.js", "Node.js", "PostgreSQL"],
-      liveLink: "https://analytics-demo.com",
+        "A comprehensive expence tracker with charts, graphs, and data insights for business intelligence.",
+      technologies: [
+        "Next.js",
+        "Chart.js",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+      ],
+      liveLink:
+        "https://6000-firebase-studio-1753452309611.cluster-73qgvk7hjjadkrjeyexca5ivva.cloudworkstations.dev/",
       githubLink: "https://github.com/username/analytics-dashboard",
     },
     {
-      image: "🛒",
-      title: "Food Delivery App",
+      image: travelAgencyImage,
+      title: "Travel Agency",
       description:
-        "A food delivery application with restaurant listings, order tracking, and payment processing.",
-      technologies: ["React Native", "Node.js", "MongoDB", "Google Maps"],
-      liveLink: "https://food-delivery-demo.com",
+        "A travel agency website that lets users browse and book hajj, umrah, and tours.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "MongoDB",
+      ],
+      liveLink:
+        "https://6000-firebase-studio-1753395741873.cluster-iktsryn7xnhpexlu6255bftka4.cloudworkstations.dev/",
       githubLink: "https://github.com/username/food-delivery",
     },
   ];
@@ -137,10 +163,10 @@ const PortfolioSection = () => {
       <div className="container mx-auto px-6" style={{ maxWidth: "1200px" }}>
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
-            My Creative Portfolio
+            Explore our Creative Portfolio
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Explore my latest projects showcasing innovative solutions and
+            Explore our latest projects showcasing innovative solutions and
             cutting-edge technologies.
           </p>
         </div>
@@ -159,7 +185,7 @@ const PortfolioSection = () => {
         </div>
 
         {/* View More Button */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <a
             href="https://github.com/username"
             target="_blank"
@@ -181,7 +207,7 @@ const PortfolioSection = () => {
               />
             </svg>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
