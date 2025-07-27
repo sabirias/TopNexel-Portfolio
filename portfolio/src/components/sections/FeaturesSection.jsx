@@ -31,12 +31,12 @@ const FeaturesSection = () => {
       description:
         "Our bug-less development ensures that your website runs smooth and fast.",
     },
-    {
-      icon: "🏆",
-      title: "Award-Winning Designs",
-      description:
-        "Our award-winning designs showcase creativity that set us apart in the industry.",
-    },
+    // {
+    //   icon: "🏆",
+    //   title: "Award-Winning Designs",
+    //   description:
+    //     "Our award-winning designs showcase creativity that set us apart in the industry.",
+    // },
     {
       icon: "⚡",
       title: "Lightning Fast Delivery",

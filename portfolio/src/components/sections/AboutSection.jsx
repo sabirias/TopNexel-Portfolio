@@ -28,7 +28,7 @@ const AboutSection = () => {
             </p>
 
             {/* Stats */}
-            <div ref={statsRef} className="flex space-x-8 mt-8">
+            {/* <div ref={statsRef} className="flex space-x-8 mt-8">
               <StatCard
                 number={500}
                 label="Revenue Generated"
@@ -47,7 +47,7 @@ const AboutSection = () => {
                 suffix="+"
                 isAnimated={isStatsVisible}
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Right Illustration Placeholder */}
